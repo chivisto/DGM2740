@@ -1,0 +1,40 @@
+
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+header h2{
+    display: block;
+}
+
+
+/*----------- NAVIGATION --------------*/
+nav {
+    width: 100%;
+    background-color: #666;
+}
+    nav ul {margin-left: 2%;}
+    nav ul li {width: auto;}
+    nav ul li:first-child a {border-left: 1px solid #777;}
+    nav ul li:last-child a {border-right: 1px solid #777;}
+    nav ul li a{padding: .5rem 1rem;}
+
+
+/*----------- MAIN --------------*/
+.pageFlower{
+    width: 50%;
+    float: right;
+    padding-left: 5px;
+}
+
+.heroImg{
+    max-width: 75rem;
+    width: 100%;
+}
+
+
+/*----------- FOOTER --------------*/
+    
