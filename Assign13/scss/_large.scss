@@ -1,0 +1,73 @@
+/* 
+    Author     : Isaac
+*/
+header {
+    div {
+        width: 75rem;
+    }
+}
+
+.nav-lg {
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    background: $first;
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 75rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            width: 10%;
+            height: 100%;
+            color: $third;
+            border-left: solid 1px $third;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: ease-in-out 0.2s;
+            &:hover {
+                background: darken($first, 10%);
+            }
+        }
+        #monitor{
+            border-right: solid 1px $third;
+        }
+    }
+}
+
+.nav-md {
+    display: none;
+}
+
+.main-content {
+    width: 75rem;
+    grid-template-areas:
+        "h1 h1 h1"
+        "onePlus onePlus onePlus"
+        "onePlus-p onePlus-p onePlus-img"
+        "pixel-img pixel pixel"
+        "pixel-img pixel pixel"
+        "iPhone-h3 iPhone-h3 iPhone-h3"
+        "iPhone-p iPhone-p iPhone-img"
+    ;
+}
+
+.pixel {
+    display: flex;
+    flex-direction: column;
+    grid-area: pixel;
+    h3 {
+        margin-bottom: 20px;
+    }
+}
+
+.pixel-h3 {
+    display: none;
+}
+.pixel-p {
+    display: none;
+}

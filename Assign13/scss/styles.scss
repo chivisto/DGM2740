@@ -1,0 +1,13 @@
+@import "_normalize.scss";
+
+@import "_variables.scss";
+
+@import  "_small.scss";
+
+@media only screen and (min-width: 48rem) {
+    @import "_medium.scss";
+} /* end of media query */
+
+@media only screen and (min-width: 75rem) {
+    @import "_large.scss";
+} /* end of media query */

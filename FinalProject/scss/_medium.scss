@@ -1,0 +1,98 @@
+@for $i from 1 through 12 {
+    $w:(($i/12)-0.02)*100%;
+    .Mmedium-#{$i}{flex-basis: $w;}
+}
+@for $i from 1 through 12 {
+    $w:($i/12)*100%;
+    .medium-#{$i}{flex-basis: $w;}
+}
+
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+
+
+/*----------- NAVIGATION --------------*/
+.nav-med-lrg {
+    background-image: linear-gradient(to bottom right, green , black);
+    max-width: 64rem;
+    width: 100%;
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+#navWrapper{
+    background-image: linear-gradient(to bottom right, green , black);
+}
+.nav-med-lrg ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2%;
+}
+.nav-med-lrg ul li {
+    float: left;
+    width: auto;
+}
+.nav-med-lrg ul li a {
+    display: block;
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+.nav-med-lrg ul li:first-child a {border-left: 1px solid #777;}
+.nav-med-lrg ul li:last-child a {border-right: 1px solid #777;}
+
+.nav-med-lrg ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+.nav-med-lrg ul li.active a {
+    background-color: $activeColor;
+    color: #fff;
+}
+
+.nav-sm{
+    display: none;
+}
+
+
+/*----------- MAIN --------------*/
+.slider {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 75rem;
+
+    img {
+        width: 100%;
+    }
+}
+.slick-slide{
+    width: 100%;
+}
+
+#submit {
+    width: 50%;
+    color: white;
+    background-color: $activeColor;
+    margin-bottom: .3rem;
+}
+
+.blogs {
+    justify-content: space-between;
+}
+.container {
+    padding-top: 1rem;
+}
+
+/*----------- FOOTER --------------*/

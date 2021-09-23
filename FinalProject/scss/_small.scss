@@ -1,0 +1,382 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@for $i from 1 through 12 {
+  $w: (($i/12)-0.02) * 100%;
+
+  .Msmall-#{$i} {
+    flex-basis: $w;
+  }
+}
+
+@for $i from 1 through 12 {
+  $w: ($i/12) * 100%;
+
+  .small-#{$i} {
+    flex-basis: $w;
+  }
+}
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Courgette', cursive;
+}
+.active{
+    background-color: $activeColor;
+}
+.icon-cog {
+  color: white;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: $headerColor;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+.headerWrapper{
+    background-color: $headerColor;
+}
+
+.logo{
+    align-items: left;
+}
+/*----------- NAVIGATION --------------*/
+nav {
+    max-width: 64rem;
+    max-width: 100%;
+    background-image: linear-gradient(to bottom right, green , black);
+}
+.nav-med-lrg{
+    display: none;
+}
+.nav-sm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    div {
+        width: 95%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #menu {
+            border: none;
+            background: none;
+            font-size: 20pt;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        #x {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 20pt;
+            font-weight: bold;
+            color: white;
+            transition: ease-in-out 0.2s;
+            cursor: pointer;
+        }
+
+        input {
+            width: 50%;
+            height: 30px;
+            padding: 5px;
+            background: white;
+            border-radius: 4px;
+            border: none;
+        }
+    }
+
+    #ddmenu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: solid 1px white;
+
+        li {
+            width: 100%;
+            height: 50px;
+            border-bottom: solid 1px white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a:hover {
+                color: whitesmoke;
+            }
+            .active{
+                background-color: $activeColor;
+            }
+        }
+    }
+}
+
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+.slider {
+    padding-top: 1rem;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 75rem;
+
+    img {
+        width: 100%;
+    }
+}
+.slick-slide{
+    width: 100%;
+}
+
+figure.founderImg.flexed.small-6.medium-6.large-6.clearfix {
+    flex: 1;
+}
+
+form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    h3 {
+        margin: 20px 0px 5px 0px;
+    }
+}
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+}
+.dish {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+    select {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+    #radio {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 10pt;
+        margin-top: 10px;
+        input {
+            width: 10px;
+            height: 5px;
+            margin-bottom: 0;
+        }
+    }
+}
+.payment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+}
+
+input:required {
+    border: solid 1px lighten(red, 40%);
+}
+input:valid {
+    border: solid 1px grey;
+}
+input:invalid {
+    border: solid 1px red;
+}
+
+#submit {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: $activeColor;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    margin-bottom: .3rem;
+    &:hover {
+        background: darken(whitesmoke, 30%);
+    }
+}
+
+span {
+    color: red;
+}
+
+.blogs {
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    h3 {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    p {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0px 0px 10px 0px;
+    }
+  }
+}
+
+.container {
+    padding-top: 1rem;
+}
+
+article {
+    padding-top: 1rem;
+    margin: 0;
+}
+article.lazyLoad figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+article.lazyLoad figure img {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.popArticle{
+    display: flex;
+    justify-content: center;
+}
+
+figcaption{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.imgs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thankYou{
+    position: center;
+}
+/*----------- FOOTER --------------*/
+footer {
+    background-image: linear-gradient(to bottom right, green , black);
+    padding: .5rem 2%;
+    text-align: center;
+    color: white;
+}
+
+.footerWrapper{
+    background-image: linear-gradient(to bottom right, green , black);
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
