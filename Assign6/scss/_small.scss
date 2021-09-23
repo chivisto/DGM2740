@@ -1,0 +1,105 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 16px;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: #ddd;
+    max-width: 75rem;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    max-width: 75rem;
+    background-color: #444;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color: #444;
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+/*----------- MAIN --------------*/
+main {
+    max-width: 75rem;
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+.articleClm{
+    column-count: 1;
+}
+
+.members{
+    clip-path: circle(50% at 50% 50%);
+    float: right;
+    margin-right: 1rem;
+    margin-left: .5rem;
+}
+
+article {
+    margin: 0;
+}
+article.lazyLoad figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+article.lazyLoad figure img {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

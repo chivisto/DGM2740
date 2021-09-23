@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Fill Me In">
+        <meta name="author" content="John Doe">
+
+        <!-- This start file was build by Paul Cheney  -->
+        <title>SuperrMEH Band</title>
+
+        <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- STYLE SHEETS -->
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="headerWrapper">
+            <!-- HEADER HERE -->
+            <header>
+                <h1>SuperrMEH '75</h1>
+                <h2>- Pronounced Soupehr-meh</h2>
+            </header>
+        </div> <!--end of headerWrapper-->
+
+        <!-- NAVIGATION HERE -->
+        <div id="navWrapper">
+            <nav class="clearfix">
+                <ul >
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li class="active"><a href="#">Members</a></li>
+                    <li><a href="#">Contact</a></li>    
+                </ul>
+            </nav>
+        </div> <!--end ofnavWrapper-->
+
+        <!-- CONTENT HERE -->
+        <div id="mainWrapper">
+            <main>
+                <h1>Members</h1>
+                <article class="articleClm">
+                    <p>
+                    <h2>Matty Haley</h2>
+                    <img src="images/matt1.jpg" alt="matt" class="members"/>
+                    Curabitur tempor iaculis consequat. Phasellus tempus dapibus massa, quis iaculis neque facilisis quis. 
+                    Suspendisse luctus libero enim, at ultrices ipsum tincidunt at. Pellentesque sollicitudin mattis ullamcorper. 
+                    Morbi sed vulputate ex. Duis hendrerit risus aliquam, molestie lacus et, feugiat quam.
+                    <p>
+                    <h2>Adam Hann</h2>
+                    <img src="images/adam1.jpg" alt="adam" class="members"/>
+                    Curabitur non tortor dui. Curabitur eget dolor massa. In et nibh quam. Sed ut diam rhoncus, feugiat
+                    erat ut, volutpat est. Vivamus non lobortis orci, vel blandit elit. Donec volutpat pharetra felis eget 
+                    tristique. Suspendisse eu fringilla eros. Quisque a elit mauris. Nunc aliquet magna et lorem egestas 
+                    tempus id quis lorem.
+                    <p>
+                    <h3>Ross MacDonald</h3>
+                    <img src="images/george1.jpg" alt="george" class="members"/>
+                    Nullam ultricies ligula rhoncus enim dapibus, et 
+                    finibus nunc egestas. Proin tristique ligula eu libero suscipit, at pellentesque magna malesuada. 
+                    Mauris rhoncus, libero vitae posuere hendrerit, est dolor gravida lectus, ut sollicitudin elit lacus 
+                    nec nisl. Aenean dignissim nibh ac elementum facilisis.
+
+                    <p>
+                    <h2>Georgee Daniel</h2>
+                    <img src="images/ross1.jpg" alt="ross" class="members"/>
+                    Lorem ipsum dolor sit amet, consecr adipiscing elit. Vestibulum aliquet, arcu sit amet 
+                    gravida malesuada, metus mi congue dolor, quis semper lacus dolor feugiat massa. Quisque 
+                    aliquet libero justo, in molestie elit condimentum sed. Mauris vel quam at ex laoreet luctus. 
+                    Nullam at commodo nibh, eget fringilla felis. 
+                </article>
+
+
+                <article class="lazyLoad">
+                    <figure>
+                        <img src="images/concert1.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert2.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert3.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert4.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert5.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert6.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert7.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert8.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert9.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert10.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert11.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert12.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert13.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert14.jpg" class="lazy" alt="concert" />
+                    </figure>
+                    <figure>
+                        <img data-src="images/concert15.jpg" class="lazy" alt="concert" />
+                    </figure>
+                </article>
+            </main>
+        </div> <!--end of mainWrapper-->
+        
+        <!-- FOOTER HERE -->  
+        <div id="footerWrapper" >
+            <footer>
+                &copy; DGM2470 &bull; Isaac Covarrubias &bull; 123-555-6789
+            </footer>
+        </div> <!--end of footerWrapper-->
+
+        <!-- Script for Lazy Load-->
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+        <script>
+            var lazyLoadInstance = new LazyLoad({
+                elements_selector: ".lazy",
+                load_delay: 500,
+                threshold: 0
+            });
+        </script>
+
+    </body>
+</html>
