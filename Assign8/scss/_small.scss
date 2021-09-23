@@ -1,0 +1,206 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Old Standard TT', serif;
+}
+
+
+/*----------- HEADER --------------*/
+#headerWrapper{
+    background-color: $primaryColor;
+}
+
+header {
+    max-width: 80rem;
+    width: 100%;
+    padding: .5rem 2%;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: left;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+#navWrapper{
+    background-color: $navFooterColor;
+}
+nav {
+    max-width: 80rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: $navFooterColor;
+}
+.nav-med-lrg{
+    display: none;
+}
+.nav-sm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  div {
+    width: 95%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #menu {
+      border: none;
+      background: none;
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+
+    #x {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
+      transition: ease-in-out 0.2s;
+      cursor: pointer;
+    }
+
+    input {
+      width: 50%;
+      height: 30px;
+      padding: 5px;
+      background: white;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+
+  #ddmenu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: solid 1px white;
+
+    li {
+      width: 100%;
+      height: 50px;
+      border-bottom: solid 1px white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      a:hover {
+        color: whitesmoke;
+      }
+      .active{
+          background-color: $activeColor;
+      }
+    }
+  }
+}
+
+/*----------- MAIN --------------*/
+main {
+    justify-content: center;
+    margin: 0 auto;
+    width: 95vw;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "one one"
+        "two three"
+        "four five"
+        "six seven";
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content {
+    font-family: 'Old Standard TT', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+.four {grid-area: four;}
+.five {grid-area: five;}
+.six {grid-area: six;}
+.seven {grid-area: seven;}
+
+
+/*----------- FOOTER --------------*/
+#footerWrapper{
+    background-color: $navFooterColor;
+}
+footer {
+    width: 100vw;
+    background-color: $navFooterColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    p {
+        color: white;
+    }
+}
+
+.footer-nav {
+    width: 95%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 20px;
+    div {
+        h3 {
+            color: white;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        p {
+            color: white;
+            margin: 0;
+        }
+    }
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

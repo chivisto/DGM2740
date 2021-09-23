@@ -1,0 +1,41 @@
+header, nav, main, footer {
+    max-width: 80rem;
+    margin:auto;
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+
+
+/*----------- NAVIGATION --------------*/
+nav{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+
+/*----------- MAIN --------------*/
+main{
+    width: 80rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "one one one two"
+        "one one one three"
+        "four five six seven"; 
+}
+
+
+
+/*----------- FOOTER --------------*/
+
+.footer-nav {
+    width: 80%;
+    grid-template-columns: repeat(4, 150px);
+    justify-content: space-between; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+}

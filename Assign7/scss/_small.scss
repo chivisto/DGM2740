@@ -1,0 +1,405 @@
+@for $i from 1 through 12 {
+  $w: (($i/12)-0.02) * 100%;
+
+  .Msmall-#{$i} {
+    flex-basis: $w;
+  }
+}
+
+@for $i from 1 through 12 {
+  $w: ($i/12) * 100%;
+
+  .small-#{$i} {
+    flex-basis: $w;
+  }
+}
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+.lrgSearch{
+    display: none;
+}
+
+header {
+    padding: .5rem 2%;
+    background-color: $primaryColor;
+    max-width: 75rem;
+}
+header h1 {margin: 0; color: whitesmoke}
+header h2 {margin: 0; font-weight: normal; color: whitesmoke}
+
+#headerWrapper{
+    background-color: $primaryColor;
+    border-top: solid .5rem $boarderColor;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: $boarderColor;
+    max-width: 75rem;
+}
+
+.nav-med-lrg{
+    display: none;
+}
+
+.nav-sm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: $boarderColor;
+
+  div {
+    width: 95%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #menu {
+      border: none;
+      background: none;
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+
+    #x {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 20pt;
+      font-weight: bold;
+      color: white;
+      transition: ease-in-out 0.2s;
+      cursor: pointer;
+    }
+
+    input {
+      width: 50%;
+      height: 30px;
+      padding: 5px;
+      background: white;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+
+  #ddmenu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: solid 1px white;
+
+    li {
+      width: 100%;
+      height: 50px;
+      border-bottom: solid 1px white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      a:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+/*----------- MAIN --------------*/
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.lawyers {
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0px 0px 0px;
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    margin-bottom: 15px;
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: black;
+      opacity: 40%;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px 6px;
+
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 30%;
+      margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+    }
+
+    button {
+      width: 70%;
+      height: 40px;
+      margin: 10px 0px 10px 0px;
+      border: none;
+      background: $primaryColor;
+      font-size: 11pt;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background: lighten($primaryColor, 30%);
+      }
+    }
+  }
+}
+
+.cta {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px 30px 0px;
+
+  button {
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background: $boarderColor;
+    font-size: 16pt;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      background: darken($boarderColor, 10%);
+    }
+  }
+}
+
+.blogs {
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    h3 {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    p {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0px 0px 10px 0px;
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      border: none;
+      border-radius: 0px 0px 5px 5px;
+      background: $primaryColor;
+      color: white;
+      cursor: pointer;
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        background: lighten($primaryColor, 10%);
+      }
+    }
+  }
+}
+
+.tip-faq {
+  width: 95vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $primaryColor;
+  border-radius: 5px;
+
+  h2 {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    margin: 8px 0px 8px 0px;
+  }
+
+  p,
+  a {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    margin: 8px 0px 8px 0px;
+  }
+
+  button {
+    width: 100%;
+    cursor: pointer;
+    background-color: darken($primaryColor, 10%);
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    border: none;
+  }
+  button:hover {
+    background-color: lighten($primaryColor, 15%);
+  }
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $primaryColor;
+  border-radius: 5px;
+  margin-top: 20px;
+
+  h2 {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    margin: 8px 0px 8px 0px;
+  }
+  p {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    margin: 8px 0px 8px 0px;
+  }
+
+  button {
+    background-color: darken($primaryColor, 10%);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 7px;
+    border-radius: 4px;
+    border: none;
+  }
+  button:hover {
+    background-color: lighten($primaryColor, 15%);
+  }
+}
+/*-----------SOCIAL ICONS-----------*/
+.fab:hover {
+  cursor: pointer;
+  color: lighten($boarderColor, 40%);
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: $primaryColor;
+    padding: .5rem 2%;
+    text-align: center;
+    max-width: 75rem;
+}
+.fab{
+    padding-left: .3rem;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
