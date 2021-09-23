@@ -1,0 +1,220 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.active{
+    background-color: $activeColor;
+}
+
+/*----------- HEADER --------------*/
+header {
+    background-image: url("../images/headerImg.jpg");
+    padding: .5rem 2%;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 7rem;
+}
+header h1 {margin: 0; color:whitesmoke;}
+header h2 {margin: 0; font-weight: normal; color:whitesmoke;}
+
+/*----------- NAVIGATION --------------*/
+
+nav {
+    max-width: 64rem;
+    max-width: 100%;
+    background-color: $navFooterColor;
+}
+.nav-med-lrg{
+    display: none;
+}
+.nav-sm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    div {
+        width: 95%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #menu {
+            border: none;
+            background: none;
+            font-size: 20pt;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        #x {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 20pt;
+            font-weight: bold;
+            color: white;
+            transition: ease-in-out 0.2s;
+            cursor: pointer;
+        }
+
+        input {
+            width: 50%;
+            height: 30px;
+            padding: 5px;
+            background: white;
+            border-radius: 4px;
+            border: none;
+        }
+    }
+
+    #ddmenu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: solid 1px white;
+
+        li {
+            width: 100%;
+            height: 50px;
+            border-bottom: solid 1px white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a:hover {
+                color: whitesmoke;
+            }
+            .active{
+                background-color: $activeColor;
+            }
+        }
+    }
+}
+/*----------- MAIN --------------*/
+main {
+}
+.slick-slide{
+width: 100%;
+}
+#sliderWrapper{
+    display: flex;
+    align-items: flex-end;
+    max-width: 64rem;
+    h3 {
+        color: white;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 250px;
+    }
+}
+.slider{
+    width:100%; 
+}
+
+.content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    h1 {
+        width: 95%;
+        text-align: left;
+    }
+}
+
+.cards {
+    width: 95vw;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card-solid-color {
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    h3 {
+        color: black;
+        font-size: 20pt;
+        margin: 0;
+    }
+    img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+.card .card-solid-color:hover{
+    opacity: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+
+/*----------- FOOTER --------------*/
+footer {
+    color: whitesmoke;
+    max-width: 64rem;
+    background-image: linear-gradient(to bottom right, white , black);
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,305 @@
+/* Prevent adjustments of font size when orientation changes  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* apply a natural box layout model to all elements */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+header {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    a {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        color: black;
+        img {
+            width: 60px;
+            height: 100%;
+            margin-right: 10px;
+        }
+        h1 {
+            font-size: 18pt;
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    position: relative;
+    font-size: 13px;
+}
+.nav-md-lg {
+    display: none;
+}
+#sub-nav {
+    display: none;
+}
+.nav-sm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    div {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: pink;
+        background: linear-gradient(-2deg, white 20%, pink 100%);
+        #menu {
+            border: none;
+            background: none;
+            font-size: 16pt;
+            font-weight: bold;
+            color: white;
+            margin-left: 10px;
+        }
+        #x {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 16pt;
+            font-weight: bold;
+            color: white;
+            margin-left: 10px;
+            transition: ease-in-out 0.2s;
+        }
+    }
+    #dd-menu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: solid 1px white;
+        transition: ease-in-out 0.2s;
+        background:pink;
+        .dd-item {
+            width: 100%;
+            height: 50px;
+            border-bottom: solid 1px white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: 20px;
+            }
+        }
+    }
+    #dd-sub-menu {
+        width: 100%;
+        height: 120px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        a {
+            width: 100%;
+            height: 40px;
+            color: white;
+            background: pink;
+            border-bottom: solid 1px white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 40px;
+        }
+    }
+}
+#active {
+    background: darken(pink, 10%);
+}
+
+main {
+    margin: 0 auto;
+    max-width: 64rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-star;
+    justify-content: center;
+    margin-bottom: 30px;
+    h1 {
+    }
+    h2 {
+    }
+}
+
+form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    h3 {
+        margin: 20px 0px 5px 0px;
+    }
+}
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+}
+.swag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+    select {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+    #radio {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 10pt;
+        margin-top: 10px;
+        input {
+            width: 10px;
+            height: 5px;
+            margin-bottom: 0;
+        }
+    }
+}
+.payment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+}
+
+input:required {
+    border: solid 1px lighten(red, 40%);
+}
+input:valid {
+    border: solid 1px grey;
+}
+input:invalid {
+    border: solid 1px red;
+}
+
+#submit {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: darken(whitesmoke, 10%);
+    margin-top: 20px;
+    color: black;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    &:hover {
+        background: darken(whitesmoke, 30%);
+    }
+}
+
+span {
+    color: red;
+}
+
+footer {
+        margin: 0 auto;
+    max-width: 64rem;
+    width: 95%;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: pink;
+    p {
+        font-size: 10pt;
+        color: white;
+    }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

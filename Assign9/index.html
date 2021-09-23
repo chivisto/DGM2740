@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Fill Me In">
+        <meta name="author" content="John Doe">
+
+        <!-- This start file was build by Paul Cheney  -->
+        <title>City of Boston</title>
+
+        <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- STYLE SHEETS -->
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    </head>
+    <body>
+        <div id="headerWrapper">
+            <!-- HEADER HERE -->
+            <header>
+                <h1>Boston</h1>
+                <h2>- Better than Miami</h2>
+            </header>
+        </div> <!--end of headerWrapper-->
+
+        <!-- NAVIGATION HERE -->
+        <div id="navWrapper">
+            <nav class="clearfix">
+                <div class="nav-med-lrg">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li class="active"><a href="#">Land Marks</a></li>
+                        <li><a href="#">Visit</a></li>
+                        <li><a href="#">The City</a></li>  
+                        <li><a href="#">Routes</a></li>
+                        <li><a href="#">Town Hall</a></li> 
+                    </ul>
+                </div>
+
+                <div class="nav-sm">
+                    <div>
+                        <button id="menu" onclick="showMenu()" style="display: initial;">☰</button>
+                        <button id="x" onclick="hideMenu()" style="display: none;">X</button>
+                    </div>
+                    <ul id="ddmenu" style="display: none;">
+                        <li><a href="#">Home</a></li>
+                        <li class="active"><a href="#">Land Marks</a></li>
+                        <li><a href="#">Visit</a></li>
+                        <li><a href="#">The City</a></li>  
+                        <li><a href="#">Routes</a></li>
+                        <li><a href="#">Town Hall</a></li> 
+                    </ul>
+                </div>
+            </nav>
+        </div> <!--end ofnavWrapper-->
+
+        <!-- CONTENT HERE -->
+        <div id="mainWrapper">
+            <main>
+                    <div id="sliderWrapper">
+                        <div class="slider">
+                            <img src="images/img1.jpg" alt="slider-img"/>
+                            <img src="images/img2.jpg" alt="slider-img"/>
+                            <img src="images/img3.jpg" alt="slider-img"/>
+                            <img src="images/img4.jpg" alt="slider-img"/>
+                        </div>
+                    </div>
+
+                <div class="content">
+                    <h1>Plan Your Visit</h1>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-solid-color">
+                                <img src="images/bed.svg" alt="icon">
+                                <h3>PLACES TO STAY</h3>
+                            </div>
+                            <img src="images/hotel.jpg" alt="hotel">
+                        </div>
+                        <div class="card">
+                            <div class="card-solid-color">
+                                <img src="images/things.svg" alt="icon">
+                                <h3>THINGS TO DO</h3>
+                            </div>
+                            <img src="images/base.jpg" alt="baseball">
+                        </div>
+                        <div class="card">
+                            <div class="card-solid-color">
+                                <img src="images/camera.svg" alt="icon">
+                                <h3>SIGHT SEEING</h3>
+                            </div>
+                            <img src="images/sights.jpg" alt="sight seeing">
+                        </div>
+                        <div class="card">
+                            <div class="card-solid-color">
+                                <img src="images/food.svg" alt="icon">
+                                <h3>DELICIOUS FOOD</h3>
+                            </div>
+                            <img src="images/food.jpg" alt="donuts">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div> <!--end of mainWrapper-->
+        <!-- FOOTER HERE -->  
+        <div id="footerWrapper" >
+            <footer>
+                &copy; DGM2740 &bull; Isaac Covarrubias &bull; Login
+            </footer>
+        </div> <!--end of footerWrapper-->
+
+        <!-- Script for HBurger Menu -->
+        <script>
+            const hamburger = document.getElementById("menu");
+            const x = document.getElementById("x");
+            const ddMenu = document.getElementById("ddmenu");
+
+            function showMenu() {
+                menu.style.display = "none";
+                x.style.display = "initial";
+                ddMenu.style.display = "flex";
+            }
+
+            function hideMenu() {
+                menu.style.display = "initial";
+                x.style.display = "none";
+                ddMenu.style.display = "none";
+            }
+        </script>
+
+        <!-- Slick Slider Small - Large -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.slider').slick({
+                    arrows: false,
+                    dots: true,
+                    dotsClass: "slick-dots"
+                });
+            });
+        </script>
+    </body>
+</html>

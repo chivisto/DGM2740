@@ -1,0 +1,51 @@
+header, nav, main, footer {
+        max-width: 64rem;
+        margin:auto;
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+active{
+    background-color: $activeColor;
+}
+/*----------- NAVIGATION --------------*/
+nav{
+    width: 100%;
+    background-image: linear-gradient(to bottom right, brown , white);
+}
+
+
+/*----------- MAIN --------------*/
+
+.content {
+    width: 64rem;
+}
+
+.cards {
+    width: 64rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-solid-color {
+    h3 {
+        font-size: 16pt;
+    }
+    p {
+        font-size: 32pt;
+    }
+}
+
+
+/*----------- FOOTER --------------*/
+    
